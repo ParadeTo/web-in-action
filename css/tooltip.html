@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .tooltip {
+      position: relative;
+    }
+    .tooltip:before {
+      position: absolute;
+      content: '';
+      border: 5px solid transparent;
+    }
+    .tooltip:after {
+      font-size: 14px;
+      line-height: normal;
+      position: absolute;
+      padding: 5px 10px;
+      content: attr(data-tooltip);
+      white-space: nowrap;
+      color: #fff;
+      border-radius: 3px;
+      background: #383838;
+    }
+    .tooltip:before,
+    .tooltip:after {
+        z-index: 1000000;
+        visibility: hidden;
+        -webkit-transition: .3s ease;
+           -moz-transition: .3s ease;
+                transition: .3s ease;
+        -webkit-transition-delay: 0ms;
+           -moz-transition-delay: 0ms;
+                transition-delay: 0ms;
+        pointer-events: none;
+        opacity: 0;
+    }
+    .tooltip:hover:before,
+    .tooltip:hover:after {
+        visibility: visible;
+        opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn btn-primary tooltip"
+    data-tooltip="在下方" data-direction="down"
+  >在下方</button>
+</body>
+</html>

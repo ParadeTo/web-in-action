@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+
+    @keyframes crossed {
+    	0% {
+    		top: -200%;
+    		left: -100%;
+    	}
+    	100% {
+    		top: -50px;
+    		left: 100%;
+    	}
+    }
+    .highlight-box:hover:before {
+      animation: crossed .5s linear;
+    }
+    .highlight-box {
+      width: 200px;
+      height: 100px;
+      position: relative;
+    }
+    .highlight-box img {
+      width: 100%;
+    }
+    .highlight-box:before {
+      display: block;
+      top: 200%;
+      left: -100%;
+      width: 50%;
+      height: 300%;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, .05) 20%,
+          rgba(255, 255, 255, .6) 65%, rgba(255, 255, 255, .05) 100%);
+      content: '';
+      z-index: 2;
+      position: absolute;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="highlight-box">
+    <img src="../img/1.png" alt="">
+  </div>
+</body>
+</html>
