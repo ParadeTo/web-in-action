@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .btn-default {
+      color: #333;
+      background-color: blue;
+      border-radius: 5px;
+      border-color: #ccc;
+      border: none;
+      padding: 10px;
+      box-shadow:
+        inset rgba(255, 254, 255, 0.6) 0 0.3em .3em,
+        inset rgba(0, 0, 0, 0.15) 0 -0.1em .3em,
+        hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px,
+        rgba(0, 0, 0, 0.2) 0 .5em 5px;
+    }
+    .btn-default:focus {
+      color: #333;
+      background-color: #e6e6e6;
+      border-color: #8c8c8c;
+    }
+    /*.btn-default:hover,*/
+    .btn-default:active {
+    	box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em .3em, inset rgba(0, 0, 0, 0.2) 0 -0.1em .3em,
+    	rgba(0, 0, 0, 0.4) 0 .1em 1px,
+    	rgba(0, 0, 0, 0.2) 0 .2em 6px;
+    	transform: translateY(.2em);
+    }
+    /*.btn-default:active:hover,
+    .btn-default:active:focus {
+      color: #333;
+      background-color: #d4d4d4;
+      border-color: #8c8c8c;
+    }
+    */
+
+  </style>
+</head>
+<body>
+  <button class="btn btn-default">default</button>
+</body>
+</html>

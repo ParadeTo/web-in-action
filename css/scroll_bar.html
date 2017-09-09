@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    /*定义滚动条轨道（track）和滑块（thumb）*/
+    ::-webkit-scrollbar-track,
+    ::-webkit-scrollbar-thumb {
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+    }
+
+    /*定义滚动条顶部（左侧）的按钮块*/
+    ::-webkit-scrollbar-button:start {
+      width: 10px;
+      height: 12px;
+      background: transparent url(../images/arrow.png) no-repeat 0 0;
+    }
+    /*定义滚动条底部（右侧）的按钮块*/
+    ::-webkit-scrollbar-button:end {
+      width: 10px;
+      height: 12px;
+      background: transparent url(../images/arrow.png) no-repeat -50px 0;
+    }
+
+    ::-webkit-scrollbar-button:start:hover {
+      background-color: #eee;
+    }
+
+    ::-webkit-scrollbar-button:end {
+      background-color: #eee;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    /*定义水平和垂直滚动条两者的交界处（拐角）*/
+    ::-webkit-scrollbar-corner {
+      display: block;
+    }
+
+    ::-webkit-scrollbar-track:hover {
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    body {
+      height: 1100px;
+      overflow-y: scroll;
+    }
+  </style>
+</head>
+<body>
+
+</body>
+</html>

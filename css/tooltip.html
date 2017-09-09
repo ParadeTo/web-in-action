@@ -9,6 +9,7 @@
     .tooltip {
       position: relative;
     }
+    /* 三角形 */
     .tooltip:before {
       position: absolute;
       content: '';
@@ -42,6 +43,25 @@
     .tooltip:hover:after {
         visibility: visible;
         opacity: 1;
+    }
+    [data-direction='down']:before {
+        top: -webkit-calc(100% - 5px);
+        top:    -moz-calc(100% - 5px);
+        top:         calc(100% - 5px);
+
+        border-bottom-color: #383838;
+    }
+    [data-direction='down']:after {
+        top: -webkit-calc(100% + 5px);
+        top:    -moz-calc(100% + 5px);
+        top:         calc(100% + 5px);
+    }
+    [data-direction='down']:before,
+    [data-direction='down']:after {
+        left: 50%;
+        -webkit-transform: translate3d(-50%,0,0);
+        -moz-transform: translate3d(-50%,0,0);
+        transform: translate3d(-50%,0,0);
     }
   </style>
 </head>
